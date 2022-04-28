@@ -17,4 +17,4 @@ describe("calculator", function(){
         expect(Calculator.addAny(1,2,3)).toEqual(16);
     });
 
-});
+})
