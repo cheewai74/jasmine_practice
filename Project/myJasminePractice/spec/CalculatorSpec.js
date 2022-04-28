@@ -1,5 +1,9 @@
 describe("calculator", function(){
 
+    beforeEach(function() {
+        Calculator.currentVal = 0;
+      });
+
     //test case: 1
     it("Should retain the current value of all time", function(){
         expect(Calculator.currentVal).toBeDefined();
@@ -14,7 +18,7 @@ describe("calculator", function(){
 
     //test case: 3
     it("Should add any number of numbers", function(){
-        expect(Calculator.addAny(1,2,3)).toEqual(16);
+        expect(Calculator.addAny(1,2,3)).toEqual(6);
     });
 
 })
