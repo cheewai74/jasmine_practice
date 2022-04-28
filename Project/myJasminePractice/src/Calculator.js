@@ -1,10 +1,10 @@
 window.Calculator = {
 
-    currentVal: 0,
-    varAfterEachExample: 0,
+    currentVal:0,
+    varAfterEachExample:0,
 
     add: function(num1){
-        this.currentVal += num1;
+        this.currentVal += num1;   
         return this.currentVal;
     },
 
@@ -16,4 +16,5 @@ window.Calculator = {
         this.currentVal = sum;
         return this.currentVal;
     },
+
 };
