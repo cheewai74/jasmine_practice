@@ -91,5 +91,26 @@ describe(`${Person.name} class`, () =>{
 
         })
     })
+
+    describe('say my name', ()=>{
+        it('alerts the full name of user', ()=>{
+
+            // arrange 
+                model.firstName = "Mark";
+                model.lastName = "Wong";
+
+                spyOn(window, 'alert');
+                // spyOn(window, 'confirm'); // failed as expected, 
+                                             // bcos there is no confirm method 
+                                             // in Person.js
+
+            // act 
+                model.sayMyName();
+
+            // assert 
+            expect(window.alert).toHaveBeenCalled();
+            expect(window.alert).toHaveBeenCalledWith(model.fullName);
+        })
+    });
 });
 
