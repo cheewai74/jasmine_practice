@@ -44,4 +44,11 @@ describe("calculator", function(){
     it("Hey this will throw an error", ()=>{
         expect(throwMeAnError).toThrow();
     });
+
+    //test case: 6
+    //Skip test by putting x in front.
+    xit("Should be a number", function(){
+        // Not a number check
+        expect(Calculator.add(20)).toBeNaN();
+    });
 });
